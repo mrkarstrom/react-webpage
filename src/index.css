@@ -26,6 +26,18 @@
   font-family: Arial, sans-serif;
   color: rgba(0, 0, 0, 0.9);
 }
-/*
 
-}*/
+.student {
+  font-family: Arial, sans-serif;
+  font-sixe: 2em;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  max-width: 300px;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.student p {
+  margin: 0;
+}

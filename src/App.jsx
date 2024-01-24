@@ -8,12 +8,13 @@ function App() {
   return (
     <>
       <Card />
-      <Card />
-      <Button></Button>
-      <Button2 />
-      <Student name="SpongeBob" age={30} isStudent={true}/>
-      <Student name="Patrick" age={35} isStudent={false}/>
+      {/* <Card /> */}
+      {/* <Button></Button> */}
+      {/* <Button2 /> */}
+      {/* <Student name="SpongeBob" age={30} isStudent={true}/> */}
+      {/* <Student name="Patrick" age={35} isStudent={false}/> */}
       <UserGreeting isLoggedIn={true} username="Magnus" />
+      <UserGreeting isLoggedIn={false} username="John" />
     </>
   );
 }

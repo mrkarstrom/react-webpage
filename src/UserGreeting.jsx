@@ -16,4 +16,9 @@ UserGreeting.propTypes = {
   username: PropTypes.string,
 };
 
+UserGreeting.defaultProps = {
+  isLoggedIn : false,
+  username : 'Guest',
+};
+
 export default UserGreeting;

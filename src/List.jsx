@@ -9,21 +9,34 @@ function List() {
     { id: 5, name: 'pineapple', calories: 37 },
   ];
 
-  fruits.sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical
+  // fruits.sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical
   //   fruits.sort((a, b) => b.name.localeCompare(a.name)); // Reverse Alphabetical
+
+  const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);
 
   const listItems = fruits.map((fruit) => (
     <li key={fruit.id}>
       {fruit.name} : &nbsp; <b>{fruit.calories}</b>
     </li>
   ));
+  const listItems2 = lowCalFruits.map((lowCalFruit) => (
+    <li key={lowCalFruit.id}>
+      {lowCalFruit.name} : &nbsp; <b>{lowCalFruit.calories}</b>
+    </li>
+  ));
 
-  return <ol>{listItems}</ol>;
+  return (
+    <>
+      <ol>{listItems}</ol>
+      <ol>{listItems2}</ol>
+    </>
+  );
 }
 
 List.propTypes = {
   fruits: PropTypes.array,
   listItems: PropTypes.string,
+  listItems2: PropTypes.string,
 };
 
 export default List;

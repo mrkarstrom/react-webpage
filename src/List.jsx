@@ -9,15 +9,16 @@ function List() {
     { id: 5, name: 'pineapple', calories: 37 },
   ];
 
-  fruits.sort();
+  fruits.sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical
+  //   fruits.sort((a, b) => b.name.localeCompare(a.name)); // Reverse Alphabetical
 
   const listItems = fruits.map((fruit) => (
     <li key={fruit.id}>
-      {fruit.name} : {fruit.calories}
+      {fruit.name} : &nbsp; <b>{fruit.calories}</b>
     </li>
   ));
 
-  return <ul>{listItems}</ul>;
+  return <ol>{listItems}</ol>;
 }
 
 List.propTypes = {

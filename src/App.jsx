@@ -28,8 +28,10 @@ function App() {
       {/* <Student name="SpongeBob" age={30} isStudent={true}/> */}
       {/* <Student name="Patrick" age={35} isStudent={false}/> */}
       <div className="centered">
-        <List items={fruits} category="Fruits" />
-        <List items={vegetables} category="Vegetables" />
+        {fruits.length > 0 && <List items={fruits} category="Fruits" />}
+        {vegetables.length > 0 && (
+          <List items={vegetables} category="Vegetables" />
+        )}
         <Card />
         <UserGreeting isLoggedIn={true} />
         <UserGreeting isLoggedIn={false} username="Magnus" />

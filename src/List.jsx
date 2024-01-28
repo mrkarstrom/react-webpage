@@ -1,40 +1,37 @@
 import PropTypes from 'prop-types';
 
-function List() {
-  const fruits = [
-    { id: 1, name: 'apple', calories: 95 },
-    { id: 2, name: 'orange', calories: 45 },
-    { id: 3, name: 'banana', calories: 105 },
-    { id: 4, name: 'coconut', calories: 159 },
-    { id: 5, name: 'pineapple', calories: 37 },
-  ];
+function List(props) {
+  const category = props.category;
 
-  // fruits.sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical
-  //   fruits.sort((a, b) => b.name.localeCompare(a.name)); // Reverse Alphabetical
+  const itemList = props.items;
 
-  const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);
+  // items.sort((a, b) => a.name.localeCompare(b.name)); // Alphabetical
+  //   items.sort((a, b) => b.name.localeCompare(a.name)); // Reverse Alphabetical
 
-  const listItems = fruits.map((fruit) => (
-    <li key={fruit.id}>
-      {fruit.name} : &nbsp; <b>{fruit.calories}</b>
+  const lowCalFruits = itemList.filter((item) => item.calories < 100);
+
+  const listItems = itemList.map((item) => (
+    <li key={item.id}>
+      {item.name} : &nbsp; <b>{item.calories}</b>
     </li>
   ));
-  const listItems2 = lowCalFruits.map((lowCalFruit) => (
-    <li key={lowCalFruit.id}>
-      {lowCalFruit.name} : &nbsp; <b>{lowCalFruit.calories}</b>
-    </li>
-  ));
+  // const listItems2 = lowCalFruits.map((lowCalFruit) => (
+  //   <li key={lowCalFruit.id}>
+  //     {lowCalFruit.name} : &nbsp; <b>{lowCalFruit.calories}</b>
+  //   </li>
+  // ));
 
   return (
-    <>
+    <div className="card list">
+      <h3>{category}</h3>
       <ol>{listItems}</ol>
-      <ol>{listItems2}</ol>
-    </>
+      {/* <ol>{listItems2}</ol> */}
+    </div>
   );
 }
 
 List.propTypes = {
-  fruits: PropTypes.array,
+  itemList: PropTypes.array,
   listItems: PropTypes.string,
   listItems2: PropTypes.string,
 };

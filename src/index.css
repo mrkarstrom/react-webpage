@@ -6,7 +6,7 @@
   text-align: center;
   max-width: 260px;
   display: inline-block;
-  margin:5em auto;
+  margin: 5em auto;
 }
 
 .card .card-image {
@@ -45,23 +45,27 @@
 .welcome-message {
   font-size: 2.5em;
   background-color: #22ff22;
-  color:white;
+  color: white;
   padding: 10px;
-  border-radius:5px;
-  margin:0 auto;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 .login-prompt {
   font-size: 2.5em;
   background-color: red;
-  color:white;
+  color: white;
   padding: 10px;
-  border-radius:5px;
-  margin:0 auto;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 
 .centered {
   width: 100vw;
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.list {
+  width: 300px;
 }

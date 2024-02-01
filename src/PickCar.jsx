@@ -23,10 +23,19 @@ function PickCar() {
     <div className="card">
       <p>
         Your favourit car is: {car.year} {car.make} {car.model}
-        <input type="number" value={car.year} onChange={handleYearChange} />
-        <input type="text" value={car.make} onChange={handleMakeChange} />
-        <input type="text" value={car.model} onChange={handleModelChange} />
       </p>
+        <p>
+          Year:
+          <input type="number" value={car.year} onChange={handleYearChange} />
+        </p>
+        <p>
+          Make:
+          <input type="text" value={car.make} onChange={handleMakeChange} />
+        </p>
+        <p>
+        Model:
+        <input type="text" value={car.model} onChange={handleModelChange} />
+        </p>
     </div>
   );
 }

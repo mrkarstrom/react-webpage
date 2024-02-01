@@ -3,20 +3,25 @@ import { useState } from 'react';
 function MyComponent() {
   const [name, setName] = useState('Guest');
   const [age, setAge] = useState(99);
+  const [isEmployed, setIsEmployed] = useState(false);
 
   const updateName = () => {
     setName('Spongebob');
   };
 
   const incAge = () => {
-    if (age < 100) {
-      setAge(age + 1);
+    if (age < 97) {
+      setAge(age + 3);
     }
   };
   const decAge = () => {
     if (age > 0) {
-      setAge(age - 1);
+      setAge(age - 3);
     }
+  };
+
+  const toggleIsEmployed = () => {
+    setIsEmployed(!isEmployed);
   };
 
   return (
@@ -26,6 +31,8 @@ function MyComponent() {
       <p>Age: {age}</p>
       <button onClick={incAge}>^</button>
       <button onClick={decAge}>v</button>
+      <p>Is Employed: {isEmployed ? 'Yes' : 'No'}</p>
+      <button onClick={toggleIsEmployed}>Toggle Employed</button>
     </div>
   );
 }

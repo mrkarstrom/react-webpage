@@ -35,7 +35,7 @@ body {
 
 .student {
   font-family: Arial, sans-serif;
-  font-sixe: 2em;
+  font-size: 2em;
   padding: 10px;
   border: 1px solid rgba(0, 0, 0, 0.8);
   max-width: 300px;
@@ -48,21 +48,40 @@ body {
   margin: 0;
 }
 
-.welcome-message {
+.welcome-message,
+.login-prompt {
   font-size: 2.5em;
-  background-color: #22ff22;
-  color: white;
   padding: 10px;
   border-radius: 5px;
   margin: 0 auto;
 }
-.login-prompt {
-  font-size: 2.5em;
-  background-color: red;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 0 auto;
+
+/* Light Mode */
+.light-mode {
+  background-color: #ffffff; /* Set background color for light mode */
+  color: rgba(0, 0, 0, 0.8); /* Set text color for light mode */
+}
+
+.light-mode .welcome-message {
+  background-color: #22ff22; /* Adjust welcome message background color for light mode */
+}
+
+.light-mode .login-prompt {
+  background-color: red; /* Adjust login prompt background color for light mode */
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #1f1f1f; /* Set background color for dark mode */
+  color: #ffffff; /* Set text color for dark mode */
+}
+
+.dark-mode .welcome-message {
+  background-color: #135a13; /* Adjust welcome message background color for dark mode */
+}
+
+.dark-mode .login-prompt {
+  background-color: #a10101; /* Adjust login prompt background color for dark mode */
 }
 
 .centered {

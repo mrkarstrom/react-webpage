@@ -10,18 +10,20 @@ function App() {
   };
 
   return (
-    <>
-      <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
-        <h1>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</h1>
-        <button onClick={toggleMode}>
-          {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        <div className="card">
-          <PickCar />
-          <MyComponent></MyComponent>
-        </div>
-        </button>
+    <div
+      className={isDarkMode ? 'dark-mode' : 'light-mode'}
+      style={{ width: '100vw', height: '100vh' }}
+    >
+      <h1>{isDarkMode ? 'Dark Mode' : 'Light Mode'}</h1>
+      {/* Toggle button */}
+      <button onClick={toggleMode}>
+        {isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+      </button>
+      <div className="card">
+        <PickCar />
+        <MyComponent></MyComponent>
       </div>
-    </>
+    </div>
   );
 }
 
